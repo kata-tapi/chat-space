@@ -34,7 +34,6 @@
 |image    |string |                              |
 |member_id|integer|null: false, foreign_key: true|
 |group_id |integer|null: false, foreign_key: true|
-<!-- valedatesでtextまたはimageどちらか入力がないと投稿できないよう設定する -->
 ### Association
 - belongs_to :image
 - belongs_to :user
