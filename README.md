@@ -1,30 +1,30 @@
-## membersテーブル
+## usersテーブル
 |Column     |Type  |Options    |
 |-----------|------|-----------|
 |email      |string|null: false|
 |password   |string|null: false|
-|member_name|string|null: false|
+|user_name  |string|null: false|
 ### Association
 - has_many :messages
-- has_many :member_groups
-- has_many :groups, through: :member_groups
+- has_many :user_groups
+- has_many :groups, through: :user_groups
 
 ## groupsテーブル
 |Column    |Type   |Options    |
 |----------|-------|-----------|
 |group_name|text   |null: false|
 ### Association
-- has_many :member_groups
-- has_many :members, through: :member_groups
+- has_many :user_groups
+- has_many :users, through: :user_groups
 - has_many :messages
 
-## member_groupsテーブル
+## user_groupsテーブル
 |Column   |Type   |Options                       |
 |---------|-------|------------------------------|
-|member_id|integer|null: false, foreign_key: true|
+|user_id  |integer|null: false, foreign_key: true|
 |group_id |integer|null: false, foreign_key: true|
 ### Association    
-- belongs_to :members
+- belongs_to :users
 - belongs_to :groups
   
 ## messagesテーブル
@@ -32,7 +32,7 @@
 |---------|-------|------------------------------|
 |text     |text   |                              |
 |image    |string |                              |
-|member_id|integer|null: false, foreign_key: true|
+|user_id  |integer|null: false, foreign_key: true|
 |group_id |integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :image
