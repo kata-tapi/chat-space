@@ -6,7 +6,7 @@
 |member_name|string|null: false|
 ### Association
 - has_many :messages
-  has_many :member_groups
+- has_many :member_groups
 - has_many :groups, through: :member_groups
 
 ## groupsテーブル
@@ -16,7 +16,7 @@
 ### Association
 - has_many :member_groups
 - has_many :members, through: :member_groups
-  has_many :messages
+- has_many :messages
 
 ## member_groupsテーブル
 |Column   |Type   |Options                       |
@@ -37,5 +37,5 @@
 <!-- valedatesでtextまたはimageどちらか入力がないと投稿できないよう設定する -->
 ### Association
 - belongs_to :image
-  belongs_to :user
-  belongs_to :group
+- belongs_to :user
+- belongs_to :group
