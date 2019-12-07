@@ -1,0 +1,17 @@
+.side_bar
+
+  .side_header
+    .side_header__box
+      .side_header__box__user_name masa
+      .side_header__box__icon
+        = link_to "#", class: "side_header__box__icon side_header__box__icon_add_group_btn" do
+          = icon("fas fa-edit", class: "")
+          %span<>
+        = link_to "#", class: "side_header__box__icon" do
+          = icon("fa fa-cog", class: "")
+          %span<>
+
+  .side_groups_list
+    .side_groups_list__box
+      .side_groups_list__box__group_name techcamp
+      .side_groups_list__box__info まだメッセージがありません

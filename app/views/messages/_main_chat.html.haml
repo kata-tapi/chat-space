@@ -1,0 +1,23 @@
+.chat_main
+
+  .chat_main_top
+    .chat_main_top__left
+      .chat_main_top__left__group test
+      .chat_main_top__left__entrant Member：masa
+    = link_to "Edit", "#", class: "chat_main_top__right__exit_btn"
+
+  .chat_middle
+    .chat_middle__box
+      .chat_middle__box__info
+        .chat_middle__box__info_name masa
+        .chat_middle__box__info_date 2019/11/20(Wed) 17:30:01
+      .chat_middle__box__message こんにちは
+
+  .chat_bottom
+    .chat_bottom_form
+      .chat_bottom_form_input
+        %input.chat_bottom_form_input_text{:placeholder => "type a message", :value => "", :style => "width: 100%"}
+        %label{class: "chat_bottom_form_input_image"}
+          = icon('far', 'image')
+          %input.chat_bottom_form_input_image_style{type: "file"}
+      = link_to "Send", "#", class: "chat_bottom_form_send_btn"
