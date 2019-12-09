@@ -2,12 +2,13 @@
 
   .side_header
     .side_header__box
-      .side_header__box__user_name masa
+      .side_header__box__user_name
+        = current_user.name
       .side_header__box__icon
         = link_to "#", class: "side_header__box__icon side_header__box__icon_add_group_btn" do
           = icon("fas fa-edit", class: "")
           %span<>
-        = link_to "#", class: "side_header__box__icon" do
+        = link_to edit_user_path(current_user), class: "side_header__box__icon" do
           = icon("fa fa-cog", class: "")
           %span<>
 
