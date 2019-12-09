@@ -17,19 +17,18 @@ float: left;
       &__box {
         color: #ffffff;
         height: 20px;
+        line-height: 20px;
         width: 260px;
         margin: auto;
         display: flex;
         justify-content: space-between;
         &__user_name {
-          line-height: 20px;
           font-size: 16px;
           height: 20px;
         }
         &__icon {
           color: #ffffff;
           width: 60px;
-          line-height: 20px;
           text-align: right;
           text-decoration: none;
           letter-spacing: 5px;
