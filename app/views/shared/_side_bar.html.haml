@@ -5,14 +5,25 @@
       .side_header__box__user_name
         = current_user.name
       .side_header__box__icon
-        = link_to new_group_path, class: "side_header__box__icon" do
-          = icon("fas fa-edit", class: "")
-          %span<>
-        = link_to edit_user_path(current_user), class: "side_header__box__icon" do
-          = icon("fa fa-cog", class: "")
-          %span<>
+        = link_to new_group_path do
+          = icon("fas fa-edit", class: "side_header__box__icon")
+        = link_to edit_user_path(current_user) do
+          = icon("fa fa-cog", class: "side_header__box__icon")
 
   .side_groups_list
-    .side_groups_list__box
-      .side_groups_list__box__group_name techcamp
-      .side_groups_list__box__info まだメッセージがありません
+    - current_user.groups.each do |group|
+      .side_groups_list__box
+        = link_to "#" do
+          .side_groups_list__box__group_name
+            = group.name
+          .side_groups_list__box__info
+            メッセージはまだありません。
+
+  -# .groups
+  -#   - current_user.groups.each do |group|
+  -#     .group
+  -#       = link_to '#' do
+  -#         .group__name
+  -#           = group.name
+  -#         .group__message
+  -#           メッセージはまだありません。
