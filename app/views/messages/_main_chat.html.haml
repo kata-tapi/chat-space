@@ -1,0 +1,24 @@
+.chat_main
+
+  .chat_main_top
+    .chat_main_top__left
+      .chat_main_top__left__group
+        = @group.name
+      %ul.chat_main_top__left__entrant
+        Member:
+        %li.chat_main_top__left__entrant_users
+          - @group.users.each do |user|
+            = user.name
+    = link_to "Edit", edit_group_path(@group.id), class: "chat_main_top__right__exit_btn"
+
+  .chat_middle
+    = render @messages
+
+  .chat_bottom
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'chat_bottom_text', placeholder: 'type a message'
+      .chat_bottom_image
+        = f.label :image, class: 'chat_bottom_image_icon' do
+          = icon('far', 'image', class: '')
+          = f.file_field :image, class: 'none'
+      = f.submit 'Send', class: 'chat_bottom_send'
