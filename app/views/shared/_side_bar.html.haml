@@ -5,7 +5,7 @@
       .side_header__box__user_name
         = current_user.name
       .side_header__box__icon
-        = link_to "#", class: "side_header__box__icon side_header__box__icon_add_group_btn" do
+        = link_to new_group_path, class: "side_header__box__icon" do
           = icon("fas fa-edit", class: "")
           %span<>
         = link_to edit_user_path(current_user), class: "side_header__box__icon" do
@@ -13,6 +13,10 @@
           %span<>
 
   .side_groups_list
-    .side_groups_list__box
-      .side_groups_list__box__group_name techcamp
-      .side_groups_list__box__info まだメッセージがありません
+    - current_user.groups.each do |group|
+      .side_groups_list__box
+        = link_to group_messages_path(group) do
+          .side_groups_list__box__group_name
+            = group.name
+          .side_groups_list__box__info
+            メッセージはまだありません。
