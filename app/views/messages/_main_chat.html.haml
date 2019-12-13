@@ -16,9 +16,9 @@
 
   .chat_bottom
     = form_for [@group, @message] do |f|
-      = f.text_field :content, class: 'chat_bottom_text', placeholder: 'type a message'
-      .chat_bottom_image
-        = f.label :image, class: 'chat_bottom_image_icon' do
-          = icon('far', 'image', class: '')
-          = f.file_field :image, class: 'none'
-      = f.submit 'Send', class: 'chat_bottom_send'
+      .chat_bottom_form
+        = f.text_field :content, class: 'chat_bottom_form_text', placeholder: 'type a message'
+        = f.label :image, class: 'chat_bottom_form_image' do
+          = icon('far', 'image') 
+          = f.file_field :image, class: 'none'  
+      = f.submit 'Send', class: 'chat_bottom_submit'
