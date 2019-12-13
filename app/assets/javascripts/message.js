@@ -1,40 +1,38 @@
 $(function(){
   function buildHTML(message){
     if (message.image) {
-    var html = `
-    <div class="chat_middle__box">
-      <div class="chat_middle__box__info">
-        <div class="chat_middle__box__info_name">
-          ${message.user}
-        </div>
-        <div class="chat_middle__box__info_date">
-          ${message.date}
-        </div>
-      </div>
-      <div class="chat_middle__box__message">
-        <div class="chat_middle__box__message_content">
-          ${message.text}
-          <img class="chat_middle__box__message_image" src="${message.image}">
-        </div>
-      </div>
-    </div>`
+      var html = `<div class="chat_middle__box">
+                    <div class="chat_middle__box__info">
+                      <div class="chat_middle__box__info_name">
+                        ${message.user}
+                      </div>
+                      <div class="chat_middle__box__info_date">
+                        ${message.date}
+                      </div>
+                    </div>
+                    <div class="chat_middle__box__message">
+                      <div class="chat_middle__box__message_content">
+                        ${message.text}
+                        <img class="chat_middle__box__message_image" src="${message.image}">
+                      </div>
+                    </div>
+                  </div>`
     } else {
-      var html = `
-      <div class="chat_middle__box">
-        <div class="chat_middle__box__info">
-          <div class="chat_middle__box__info_name">
-            ${message.user}
-          </div>
-          <div class="chat_middle__box__info_date">
-            ${message.date}
-          </div>
-        </div>
-        <div class="chat_middle__box__message">
-          <div class="chat_middle__box__message_content">
-            ${message.text}
-          </div>
-        </div>
-      </div>`
+      var html = `<div class="chat_middle__box">
+                    <div class="chat_middle__box__info">
+                      <div class="chat_middle__box__info_name">
+                        ${message.user}
+                      </div>
+                      <div class="chat_middle__box__info_date">
+                        ${message.date}
+                      </div>
+                    </div>
+                    <div class="chat_middle__box__message">
+                      <div class="chat_middle__box__message_content">
+                        ${message.text}
+                      </div>
+                    </div>
+                  </div>`
     }
     return html;
   }
