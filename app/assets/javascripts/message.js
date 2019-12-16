@@ -1,5 +1,4 @@
 $(function(){
-                        ${message.date}
   function buildHTML(message) {
     var image = message.image ? `<img class="message-text__image" src=${message.image}>` : "";
 
