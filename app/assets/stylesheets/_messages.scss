@@ -69,6 +69,7 @@ float: left;
       padding: 0 40px;
       display: flex;
       justify-content: space-between;
+      overflow: scroll;
 
         &__left {
           padding-top: 35px;
