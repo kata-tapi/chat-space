@@ -13,10 +13,9 @@ $(function(){
                   </div>
                   <div class="chat_middle__box__message">
                     <p class="chat_middle__box__message_content">
-                      ${message.content}
-                      </p>
-                      ${image}
-                    </div>
+                    ${message.content}
+                    </p>
+                    ${image}
                   </div>
                 </div>`
     return html;
