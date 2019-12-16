@@ -12,8 +12,9 @@ $(function(){
                     </div>
                   </div>
                   <div class="chat_middle__box__message">
-                    <div class="chat_middle__box__message_content">
+                    <p class="chat_middle__box__message_content">
                       ${message.content}
+                      </p>
                       ${image}
                     </div>
                   </div>
