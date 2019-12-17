@@ -41,7 +41,7 @@ $(function(){
       $('.chat_bottom_submit').prop('disabled', false);
   })
     .fail(function(){
-      alert("メッセージ送信に失敗しました");
+      alert("メッセージを入力してください");
       $('.chat_bottom_submit').prop('disabled', false);
   });
 });
